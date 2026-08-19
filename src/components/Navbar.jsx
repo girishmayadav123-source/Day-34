@@ -1,54 +1,27 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import "./Navbar.css";
 
-function Navbar() {
+export default function Navbar() {
   return (
-    <>
-      <style>
-        {`
-          .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 18px 8%;
-            background: #6b4f2a;
-            color: white;
-          }
-
-          .navbar-logo {
-            font-size: 24px;
-            font-weight: bold;
-          }
-
-          .navbar-links {
-            display: flex;
-            gap: 30px;
-          }
-
-          .navbar-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-          }
-
-          .navbar-links a:hover {
-            color: #f3e8d0;
-          }
-        `}
-      </style>
-
-      <nav className="navbar">
-        <div className="navbar-logo">
-          Ministry
-        </div>
-
-        <div className="navbar-links">
-          <Link to="/community">Community</Link>
-          <Link to="/contact">Contact</Link>
-        </div>
+    <header className="site-nav">
+      <NavLink className="brand" to="/" aria-label="SmartLogix Ministry home">
+        <span className="brand-mark">✦</span>
+        <span>
+          SmartLogix
+          <br />
+          <strong>Ministry</strong>
+        </span>
+      </NavLink>
+      <nav aria-label="Primary navigation">
+        <NavLink to="/" end>
+          Home
+        </NavLink>
+        <NavLink to="/services">Services</NavLink>
+         <NavLink to="/events">Events</NavLink>
+          <NavLink to="/community">Community</NavLink>
+           <NavLink to="/contact">Contact</NavLink>
       </nav>
-    </>
+      <a className="nav-action">Plan a Visit</a>
+    </header>
   );
 }
-
-export default Navbar;

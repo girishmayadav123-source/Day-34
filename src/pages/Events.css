@@ -1,0 +1,300 @@
+.events-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f8f9fa;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Hero Section */
+
+.events-hero {
+  min-height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+
+  background:
+    linear-gradient(
+      rgba(40, 60, 80, 0.75),
+      rgba(40, 60, 80, 0.75)
+    ),
+    url("https://images.unsplash.com/photo-1438032005730-c779502df39b?auto=format&fit=crop&w=1600&q=80");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  max-width: 750px;
+  color: white;
+}
+
+.hero-content span {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero-content h1 {
+  font-size: 52px;
+  margin: 18px 0;
+}
+
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* Introduction */
+
+.events-intro {
+  max-width: 850px;
+  margin: auto;
+  padding: 70px 20px 40px;
+  text-align: center;
+}
+
+.events-intro h2 {
+  font-size: 34px;
+  color: #34495e;
+  margin-bottom: 18px;
+}
+
+.events-intro p {
+  color: #666;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* Events Section */
+
+.events-section {
+  padding: 30px 20px 80px;
+}
+
+.events-container {
+  max-width: 1100px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+/* Event Card */
+
+.event-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+
+  display: flex;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Date */
+
+.event-date {
+  min-width: 125px;
+  background: #eef3f6;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 25px 10px;
+
+  text-align: center;
+}
+
+.calendar-icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.event-date p {
+  margin: 0;
+  color: #34495e;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+/* Event Content */
+
+.event-content {
+  padding: 28px;
+  flex: 1;
+}
+
+.event-category {
+  display: inline-block;
+
+  padding: 6px 12px;
+  border-radius: 20px;
+
+  background: #e8f0f4;
+  color: #466b7c;
+
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.event-content h3 {
+  color: #2f4050;
+  font-size: 22px;
+  margin: 15px 0 10px;
+}
+
+.event-description {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+/* Event Details */
+
+.event-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  color: #555;
+  font-size: 14px;
+
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+
+.event-btn {
+  border: none;
+  padding: 10px 18px;
+
+  border-radius: 6px;
+
+  background: #34495e;
+  color: white;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.event-btn:hover {
+  background: #253544;
+}
+
+/* CTA */
+
+.events-cta {
+  background: #e9eef1;
+
+  text-align: center;
+
+  padding: 70px 20px;
+}
+
+.events-cta h2 {
+  color: #34495e;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.events-cta p {
+  max-width: 650px;
+  margin: 0 auto 25px;
+
+  color: #666;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.cta-btn {
+  padding: 13px 28px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #34495e;
+  color: white;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #253544;
+  transform: translateY(-2px);
+}
+
+/* Tablet */
+
+@media (max-width: 850px) {
+  .events-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .events-hero {
+    min-height: 320px;
+  }
+
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .events-intro h2 {
+    font-size: 28px;
+  }
+
+  .event-card {
+    flex-direction: column;
+  }
+
+  .event-date {
+    min-width: auto;
+    padding: 18px;
+  }
+
+  .event-content {
+    padding: 22px;
+  }
+
+  .events-cta h2 {
+    font-size: 27px;
+  }
+}
